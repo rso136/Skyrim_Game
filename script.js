@@ -385,7 +385,7 @@ function startGame() {
 		}
 	});
 
-	$('.inn').on('click', function() {
+	$('#innBox').on('click', function() {
 		innToggle();
 	});
 
