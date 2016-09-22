@@ -1,0 +1,69 @@
+body {
+	color: #FFFFFF;
+	background-color: #565656;
+	font-family: 'Cinzel', serif;
+}
+
+div, img {
+    border: hidden;
+    border-radius: 8px;
+}
+
+#heading {
+	background-color: #222222;
+	height: 70px;
+}
+
+#hero, #opponent {
+	background-color: #222222;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+#opponent {
+	display: none;
+}
+
+#plyrImg {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 70px;
+}
+
+#opponentDiv > img {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 70px;
+}
+
+#textBox {
+	background-color: #222222;
+	height: 200px;
+	margin-bottom: 100px;
+}
+
+button {
+	margin: 5px;
+}
+
+.modal-content {
+	background-color: #222222;
+	color: white;
+}
+
+#modalTextInn {
+	height: 250px;
+}
+
+.close {
+	color: white;
+}
+
+#innBox {
+	background-color: #222222;
+	height: 200px;
+	border: groove;
+	margin-left: 20px;
+}
+
+

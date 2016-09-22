@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="assets/images/skyrimlogo.png" height="35" width="35">
+    </a>
+    <h2 class="navbar-text navbar-left">SKYRIM ARENA</h2>
+    
+    </div>
+  </div>
+</nav>
+<div class="container">
+<div class="modal fade" id="levelModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Level Up</h4>
+      </div>
+      <div class="modal-body" id="modalText">
+      	<h4>Congratulations! You have gained a level!</h4>
+      		<h5>New level: <span id="levelUp"></span></h5>
+      		<h5>Hitpoints: <span id="hitUp"></span> / <span id="maxUp"></span></h5>
+      		<h5>Offense: <span id="offenseUp"></span></h5>
+      		<h5>Defense: <spand id="defenseUp"></spand></h5>
+      	<div id="arenaReward">
+      	</div>		
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="innModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">The Bannered Mare</h4>
+      </div>
+      <div class="modal-body" id="modalTextInn">
+		<h5><b>Innkeeper:</b> <i>"Welcome to the Bannered Mare! Our hearth is always warm and our beds will soothe any ache or pain. Rent a room for the night at the cost of <b>10 coins</b>. Would you like to rent a room?"</i></h5>
+		<br>
+		<h5 id="rentYes"><b>Yes.</b></h5>
+		<h5 id="rentNo"><b>No.</b></h5>
+		<br>
+		<div id="innText">
+		</div>		
+      </div>
+    </div>
+  </div>
+</div>
+	
+	<div class="row">
+ 		<div class="col-md-12" id="heading">
+ 			<h3>Choose Your Opponent</h3>
+ 		</div>
+ 	</div>
+ 	<div class="row" id="enemySelect">
+ 		<div class="col-md-2">
+ 			<h4>Bandit</h4>
+ 			<img class="enemy" id="bandit" src="assets/images/bandit.png" height="200" width="150">
+		</div>
+ 		<div class="col-md-2">
+ 		 	<h4>Draugr</h4>
+ 			<img class="enemy" id="draugr" src="assets/images/draugr.png" height="200" width="150">
+		</div>
+		<div class="col-md-2">
+ 			<h4>Falmer</h4>
+ 			<img class="enemy" id="falmer" src="assets/images/falmer.jpg" height="200" width="150">
+		</div>
+		<div class="col-md-2">
+ 			<h4>Thalmor Soldier</h4>
+ 			<img class="enemy" id="thalmor" src="assets/images/thalmor.png" height="200" width="150">
+		</div>
+		<div class="col-md-2">
+ 			<h4>Troll</h4>
+ 			<img class="enemy" id="troll" src="assets/images/troll.png" height="200" width="150">
+		</div>
+		<div class="col-md-2">
+ 			<h4>Vampire</h4>
+ 			<img class="enemy" id="vampire" src="assets/images/vampire.png" height="200" width="150">
+		</div>
+
+ 	</div>
+ 	<br>
+ 	<div class="row">
+ 		<div class="col-md-2 col-md-offset-1">
+ 			<h4>Dragon Priest</h4>
+ 			<img class="enemy" id="dragonpriest" src="assets/images/dragonpriest.png" height="200" width="150">
+		</div>
+	 	<div class="col-md-2">
+ 			<h4>Dragon</h4>
+ 			<img class="enemy" id="dragon" src="assets/images/dragon.jpg" height="200" width="150">
+		</div>
+	 	<div class="col-md-2">
+ 			<h4>Lord Harkon</h4>
+ 			<img class="enemy" id="harkon" src="assets/images/harkon.png" height="200" width="150">
+		</div>
+	 	<div class="col-md-4">
+ 			<h4>Alduin</h4>
+ 			<img class="enemy" id="alduin" src="assets/images/alduin.jpg" height="200" width="250">
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2" id="hero">
+			<h3>Dragonborn (Player)</h3>
+			<img src="assets/images/dragonborn.jpg" height="200" width="150" id="plyrImg">
+
+				<h5>Level: <span id="level"></span></h5>
+				<h5>Experience: <span id="exp"></span></h5>
+				<h5>Hitpoints: <span id="hitpoints"></span> / <span id="maxpoints"></span></h5>
+				<h5>Offense: <span id="offense"></span></h5>
+				<h5>Defense: <span id="defense"></span></h5>
+				<h5>Weapon: <span id="weapon"></span></h5>
+				<h5>Coins: <span id="coins"></span></h5>
+				<button type="button" class="btn btn-danger btn-sm" id="fightBtn">FIGHT</button>
+				<button type="button" class="btn btn-warning btn-sm" id="runBtn">RUN</button>
+
+		</div>
+		<div class="col-md-4" id="opponent">
+			<h3>Opponent</h3>
+			<div id="opponentDiv">
+
+			</div>
+				<h5>Name: <span id="opName"></span></h5>
+				<h5>Hitpoints: <span id="opHitpoints"></span></h5>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-1" id="textBox">
+			<h4><b>Battle Description:</b></h4>
+			<h5><span id="introText"></span></h5>
+			<div id="battleUpdate2">
+			</div>
+			<br>
+			<div id="battleUpdate">
+			</div>
+		</div>
+		<div class="col-md-2" id="innBox">
+			<h5><b>The Bannered Mare</b></h5>
+			<img class="inn" src="assets/images/inn.png" height="140" width="140">
+		</div>
+	</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
