@@ -126,6 +126,7 @@ var allOps = {
 var opponent;
 var heroAtt;
 var level = false;
+var gameOver = false;
 
 var missArr = ['Your opponent deftly dodges your attack.', 'Your slash is easily deflected by your opponent.', 'Your opponent stumbles backwards as he blocks your strike.', 'Your swing sails wide over the head of your opponent.', 'Your opponent manages to swipe your attack aside.'];
 var hitArr = ['Your opponent winces as your manage to land a glancing blow.', 'Your blade cuts into your opponent, delivering a flesh wound.', 'Your opponent staggers under the force of your blow.', 'Your opponent grunts in pain as your deliver a wounding strike.', 'Your weapon smashes into your opponent, knocking him to the ground. He struggles to his feet, dazed.']
@@ -173,7 +174,7 @@ function levelToggle() {
 
 function innToggle() {
 
-	if (enemySelected === false) {	
+	if (enemySelected === false && gameOver === false) {	
 		$('#innText').empty();
 		$('#innModal').modal('toggle');
 	}
@@ -368,7 +369,7 @@ function startGame() {
 
 	$('.enemy').on('click', function() {
 
-		if (enemySelected === false) {
+		if (enemySelected === false && gameOver === false) {
 
 			$('#opponentDiv').empty()
 
@@ -409,7 +410,7 @@ function startGame() {
 
 	$('#runBtn').on('click', function() {
 
-		if (enemySelected === true) {
+		if (enemySelected === true && gameOver === false) {
 			runCheck();
 		}
 	})
@@ -451,7 +452,7 @@ function startGame() {
 		enemyOff = Math.floor((Math.random() * opponent.offense) + 1); 
 	    enemyDef = Math.floor((Math.random() * opponent.defense) + 1); 
 
-		if (enemySelected === true) {
+		if (enemySelected === true && gameOver === false) {
 
 			if (enemyOff > heroDef) {
 
@@ -459,6 +460,14 @@ function startGame() {
 				$('#hitpoints').text(dragonborn.hitpoints);	
 				oppHitDesc = oppHitArr[Math.floor(Math.random() * oppHitArr.length)];
 				$('#battleUpdate2').text(oppHitDesc + " You've been hit for " + enemyAtt + " damage!");	
+
+				if (dragonborn.hitpoints <= 0) {
+					$('#hitpoints').text(dragonborn.hitpoints);
+					$('#battleUpdate2').append(" You have been defeated. Game over. <a href='index.html'>Click</a> to restart.");
+					$('#battleUpdate').hide();
+					enemySelected = false;
+					gameOver = true;
+				}
 			}
 			else {
 				oppMissDesc = oppMissArr[Math.floor(Math.random() * oppMissArr.length)];
@@ -466,7 +475,7 @@ function startGame() {
 
 			}
 
-			if (heroOff > enemyDef) {
+			if (heroOff > enemyDef && gameOver === false) {
 				opponent.hitpoints = opponent.hitpoints - heroAtt;
 				$('#opHitpoints').text(opponent.hitpoints);
 				hitDesc = hitArr[Math.floor(Math.random() * hitArr.length)];
