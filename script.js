@@ -244,7 +244,7 @@ function levelCheck() {
 		$('#maxpoints').text(dragonborn.maxpoints);
 		$('#offense').text(dragonborn.offense);
 		$('#defense').text(dragonborn.defense);
-		v5 = true;
+		lv5 = true;
 	}
 	if (dragonborn.exp >= 500 && lv6 === false) {
 		dragonborn.level = 6;
