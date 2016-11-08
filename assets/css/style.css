@@ -1,7 +1,14 @@
 body {
 	color: #FFFFFF;
-	background-color: #565656;
+	background: url("../images/skyrim_backdrop.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	font-family: 'Cinzel', serif;
+}
+
+.navbar-custom {
+	background-color: black;
+	border-bottom: outset;
 }
 
 div, img {
@@ -9,13 +16,24 @@ div, img {
     border-radius: 8px;
 }
 
+.enemyBox {
+	text-align: center;
+}
+
+.enemy {
+	border: groove;
+	color: gray;
+}
+
 #heading {
-	background-color: #222222;
+	background-color: black;
+	border: outset;
 	height: 70px;
 }
 
 #hero, #opponent {
-	background-color: #222222;
+	background-color: black;
+	border: outset;
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
@@ -37,7 +55,8 @@ div, img {
 }
 
 #textBox {
-	background-color: #222222;
+	background-color: black;
+	border: outset;
 	height: 200px;
 	margin-bottom: 100px;
 }
@@ -47,7 +66,7 @@ button {
 }
 
 .modal-content {
-	background-color: #222222;
+	background-color: black;
 	color: white;
 }
 
@@ -60,9 +79,9 @@ button {
 }
 
 #innBox {
-	background-color: #222222;
+	background-color: black;
 	height: 200px;
-	border: groove;
+	border: outset;
 	margin-left: 20px;
 }
 
