@@ -11,6 +11,8 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 <nav class="navbar navbar-custom">
@@ -66,62 +68,62 @@
 </div>
 	
 	<div class="row">
- 		<div class="col-md-12" id="heading">
- 			<h3>Choose Your Opponent</h3>
+ 		<div class="col-md-12 col-xs-12" id="heading">
+ 			<h3 id="headingTitle">Choose Your Opponent</h3>
  		</div>
  	</div>
  	<div class="row" id="enemySelect">
- 		<div class="enemyBox col-md-2">
+ 		<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Bandit</h4>
- 			<a href='#'><img class="enemy" id="bandit" src="assets/images/bandit.png" height="200" width="150"></a>
+ 			<a href='#hero'><img class="img-responsive enemy" id="bandit" src="assets/images/rsz_bandit.png"></a>
 		</div>
- 		<div class="enemyBox col-md-2">
+ 		<div class="enemyBox col-md-2 col-xs-4">
  		 	<h4>Draugr</h4>
- 			<a href='#'><img class="enemy" id="draugr" src="assets/images/Draugr.png" height="200" width="150"></a>
+ 			<a href='#hero'><img class="img-responsive enemy" id="draugr" src="assets/images/rsz_draugr.png"></a>
 		</div>
-		<div class="enemyBox col-md-2">
+		<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Falmer</h4>
- 			<a href='#'><img class="enemy" id="falmer" src="assets/images/falmer.jpg" height="200" width="150"></a>
+ 			<a href='#hero'><img class="img-responsive enemy" id="falmer" src="assets/images/rsz_falmer.jpg"></a>
 		</div>
-		<div class="enemyBox col-md-2">
- 			<h4>Thalmor Soldier</h4>
- 			<a href='#'><img class="enemy" id="thalmor" src="assets/images/thalmor.png" height="200" width="150"></a>
+		<div class="enemyBox col-md-2 col-xs-4">
+ 			<h4>Thalmor</h4>
+ 			<a href='#hero'><img class="enemy img-responsive" id="thalmor" src="assets/images/rsz_thalmor.png"></a>
 		</div>
-		<div class="enemyBox col-md-2">
+		<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Troll</h4>
- 			<a href='#'><img class="enemy" id="troll" src="assets/images/troll.png" height="200" width="150"></a>
+ 			<a href='#hero'><img class="enemy img-responsive" id="troll" src="assets/images/rsz_troll.png"></a>
 		</div>
-		<div class="enemyBox col-md-2">
+		<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Vampire</h4>
- 			<a href='#'><img class="enemy" id="vampire" src="assets/images/vampire.PNG" height="200" width="150"></a>
+ 			<a href='#hero'><img class="enemy img-responsive" id="vampire" src="assets/images/rsz_vampire.PNG"></a>
 		</div>
 
  	</div>
  	<br>
  	<div class="row">
- 		<div class="enemyBox col-md-2 col-md-offset-1">
- 			<h4>Dragon Priest</h4>
- 			<a href='#'><img class="enemy" id="dragonpriest" src="assets/images/dragonpriest.png" height="200" width="150"></a>
+ 		<div class="enemyBox col-md-2 col-md-offset-2 col-xs-4">
+ 			<h4>Priest</h4>
+ 			<a href='#hero'><img class="enemy img-responsive" id="dragonpriest" src="assets/images/rsz_dragonpriest.png"></a>
 		</div>
-	 	<div class="enemyBox col-md-2">
+	 	<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Dragon</h4>
- 			<a href='#'><img class="enemy" id="dragon" src="assets/images/dragon.jpg" height="200" width="150"></a>
+ 			<a href='#hero'><img class="enemy img-responsive" id="dragon" src="assets/images/rsz_dragon.jpg"></a>
 		</div>
-	 	<div class="enemyBox col-md-2">
- 			<h4>Lord Harkon</h4>
- 			<a href='#'><img class="enemy" id="harkon" src="assets/images/harkon.png" height="200" width="150"></a>
+	 	<div class="enemyBox col-md-2 col-xs-4">
+ 			<h4>Harkon</h4>
+ 			<a href='#hero'><img class="enemy img-responsive" id="harkon" src="assets/images/rsz_harkon.png"></a>
 		</div>
-	 	<div class="enemyBox col-md-4">
+	 	<div class="enemyBox col-md-2 col-xs-4">
  			<h4>Alduin</h4>
- 			<a href='#'><img class="enemy" id="alduin" src="assets/images/alduin.jpg" height="200" width="250"></a>
+ 			<a href='#hero'><img class="enemy img-responsive" id="alduin" src="assets/images/rsz_alduin.jpg"></a>
 		</div>
 	</div>
 	<br>
 	<br>
 	<div class="row">
-		<div class="col-md-4 col-md-offset-2" id="hero">
-			<h3>Dragonborn (Player)</h3>
-			<img src="assets/images/dragonborn.jpg" height="200" width="150" id="plyrImg">
+		<div class="col-md-4 col-md-offset-2 col-xs-6" id="hero">
+			<h4>Dragonborn (Player)</h4>
+			<img src="assets/images/rsz_dragonborn.jpg" class="img-responsive" id="plyrImg">
 
 				<h5>Level: <span id="level"></span></h5>
 				<h5>Experience: <span id="exp"></span></h5>
@@ -134,8 +136,8 @@
 				<button type="button" class="btn btn-warning btn-sm" id="runBtn">RUN</button>
 
 		</div>
-		<div class="col-md-4" id="opponent">
-			<h3>Opponent</h3>
+		<div class="col-md-4 col-xs-6" id="opponent">
+			<h4>Opponent</h4>
 			<div id="opponentDiv">
 
 			</div>
@@ -144,7 +146,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-8 col-md-offset-1" id="textBox">
+		<div class="col-md-8 col-md-offset-1 col-xs-12" id="textBox">
 			<h4><b>Battle Description:</b></h4>
 			<h5><span id="introText"></span></h5>
 			<div id="battleUpdate2">
@@ -153,13 +155,31 @@
 			<div id="battleUpdate">
 			</div>
 		</div>
-		<div class="col-md-2" id="innBox">
+		<div class="col-md-2 col-xs-6" id="innBox">
 			<h5><b>The Bannered Mare</b></h5>
-			<a href='#'><img class="inn" src="assets/images/inn.png" height="140" width="140"></a>
+			<a href="#"><img class="img-responsive inn" src="assets/images/rsz_inn.png"></a>
 		</div>
 	</div>
 
 </div>
 <script src="script.js"></script>
+<script>
+$(document).ready(function(){
+
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+
+});	
+</script>
 </body>
 </html>

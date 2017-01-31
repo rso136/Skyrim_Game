@@ -1,6 +1,7 @@
 body {
 	color: #FFFFFF;
 	background: url("../images/skyrim_backdrop.jpg");
+	height: 100%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	font-family: 'Cinzel', serif;
@@ -16,6 +17,11 @@ div, img {
     border-radius: 8px;
 }
 
+img {
+	display: block;
+    margin: 0 auto;
+}
+
 .enemyBox {
 	text-align: center;
 }
@@ -28,14 +34,19 @@ div, img {
 #heading {
 	background-color: black;
 	border: outset;
-	height: 70px;
+	/*height: 70px;*/
+}
+
+#headingTitle {
+	margin-top: 1vh;
 }
 
 #hero, #opponent {
 	background-color: black;
 	border: outset;
 	margin-bottom: 20px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
+	margin-right: 1vw;
 }
 
 #opponent {
@@ -45,20 +56,25 @@ div, img {
 #plyrImg {
 	float: left;
 	margin-right: 20px;
-	margin-bottom: 70px;
+	/*margin-bottom: 70px;*/
+	margin-bottom: 3vh;
+}
+
+#fightBtn, #runBtn {
+	margin-bottom: 1vh;
 }
 
 #opponentDiv > img {
 	float: left;
 	margin-right: 20px;
-	margin-bottom: 70px;
+	margin-bottom: 3vh;
 }
 
 #textBox {
 	background-color: black;
 	border: outset;
 	height: 200px;
-	margin-bottom: 100px;
+	margin-bottom: 2vh;
 }
 
 button {
@@ -82,7 +98,32 @@ button {
 	background-color: black;
 	height: 200px;
 	border: outset;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
+	margin-left: 1vw;
+}
+
+a#battleText:visited {
+	text-decoration: none;
+}
+
+a#battleText:hover {
+	text-decoration: none;
+}
+
+a#battleText:active {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+	#hero, #opponent {
+		margin-right: 0;
+	}
+
+	#textBox {
+		height: 260px;
+	}
+
 }
 
 
