@@ -102,18 +102,6 @@ button {
 	margin-left: 1vw;
 }
 
-a#battleText:visited {
-	text-decoration: none;
-}
-
-a#battleText:hover {
-	text-decoration: none;
-}
-
-a#battleText:active {
-	text-decoration: none;
-}
-
 @media only screen and (max-width: 500px) {
 
 	#hero, #opponent {
