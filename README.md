@@ -4,5 +4,5 @@ Description: Skyrim Arena is a jquery application intended to demonstrate comple
 
 The primary technologies utilized in this application are as follows:
 
-Jquery
-User Interface: Bootstrap 3
+- Jquery
+- User Interface: Bootstrap 3
