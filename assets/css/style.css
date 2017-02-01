@@ -47,6 +47,7 @@ img {
 	margin-bottom: 20px;
 	/*margin-right: 20px;*/
 	margin-right: 1vw;
+	padding-bottom: 1vh;
 }
 
 #opponent {
@@ -61,7 +62,7 @@ img {
 }
 
 #fightBtn, #runBtn {
-	margin-bottom: 1vh;
+	/*margin-bottom: 1vh;*/
 }
 
 #opponentDiv > img {
