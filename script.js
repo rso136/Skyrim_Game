@@ -178,6 +178,10 @@ function innToggle() {
 		$('#innText').empty();
 		$('#innModal').modal('toggle');
 	}
+	else {
+		$('#battleUpdate2').empty()
+		$('#battleUpdate').html('<p><b><i>You cannot enter the inn during battle.</i></b></p>');
+	}
 }
 
 function levelCheck() {
@@ -386,7 +390,7 @@ function startGame() {
 		}
 	});
 
-	$('#innBox').on('click', function() {
+	$('#innBox, #innLink').on('click', function() {
 		innToggle();
 	});
 
