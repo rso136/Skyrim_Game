@@ -105,6 +105,22 @@ button {
 
 @media only screen and (max-width: 500px) {
 
+	.bottom3 > h4 {
+		margin-top: 0;
+	}
+
+	.mid3 {
+		padding-top: 7px;
+	}
+
+	.top3 {
+		padding-top: 7px;
+	}
+
+	.bottom1 {
+		padding-top: 7px;
+	}
+
 	#hero, #opponent, #textBox {
 		margin: 0;
 	}
