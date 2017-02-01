@@ -67,7 +67,7 @@ img {
 #opponentDiv > img {
 	float: left;
 	margin-right: 20px;
-	margin-bottom: 3vh;
+	margin-bottom: 2vh;
 }
 
 #textBox {
@@ -78,7 +78,7 @@ img {
 }
 
 button {
-	margin: 5px;
+	margin: 1vh 1px 1vh 0;
 }
 
 .modal-content {
@@ -87,7 +87,8 @@ button {
 }
 
 #modalTextInn {
-	height: 250px;
+	height: 290px;
+
 }
 
 .close {
@@ -104,14 +105,40 @@ button {
 
 @media only screen and (max-width: 500px) {
 
-	#hero, #opponent {
-		margin-right: 0;
+	#hero, #opponent, #textBox {
+		margin: 0;
 	}
 
 	#textBox {
 		height: 260px;
 	}
 
+	/*#opponentDiv > img {
+		display: none;
+	}*/
+
+	#plyrImg {
+		display: none;
+	}
+
+	#hero, #opponent {
+		height: 55vh;
+	}
+
+	#innBox {
+		text-align: center;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	#hero, #opponent, #textBox, #innBox {
+		margin: 0;
+	}
+
+	#innBox {
+		text-align: center;
+	}
 }
 
 
